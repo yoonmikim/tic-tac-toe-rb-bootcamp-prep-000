@@ -23,3 +23,12 @@ WIN_COMBINATIONS = [
   [2,4,6]
   # ETC, an array for each win combination
 ]
+
+def play(board)
+  turn(board) until over?(board)
+  if won?(board)
+    puts "Congratulations #{winner(board)}!"
+  elsif draw?(board)
+    puts "Cat's Game!"
+  end
+end
